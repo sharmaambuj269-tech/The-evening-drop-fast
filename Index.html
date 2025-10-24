@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Evening Drop - Fast Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="header">
+        <h1>🍔 The Evening Drop</h1>
+        <p>Your evening food delivery partner</p>
+    </div>
+
+    <!-- Restaurant List -->
+    <div class="restaurant-list">
+        <div class="restaurant-card">
+            <h3>🍕 Pizza Palace</h3>
+            <p>⭐ 4.3 • 30-40 min</p>
+            <button onclick="showMenu('pizza')">View Menu</button>
+        </div>
+        <div class="restaurant-card">
+            <h3>🍔 Burger King</h3>
+            <p>⭐ 4.5 • 25-35 min</p>
+            <button onclick="showMenu('burger')">View Menu</button>
+        </div>
+        <div class="restaurant-card">
+            <h3>🍗 Chicken Express</h3>
+            <p>⭐ 4.2 • 20-30 min</p>
+            <button onclick="showMenu('chicken')">View Menu</button>
+        </div>
+    </div>
+
+    <!-- Contact & Payment Section -->
+    <div class="contact-section">
+        <h3>📞 Contact & Payment</h3>
+        <div class="contact-card">
+            <p><strong>UPI ID:</strong> upi_7428733852-2@ybl</p>
+            <p><strong>Contact:</strong> 7428733852</p>
+            <button onclick="copyUPI()">Copy UPI ID</button>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        💬
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chat-header">
+            <h4>Support Bot</h4>
+            <button onclick="toggleChat()">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="bot-message">Hello! How can I help you with your order?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
